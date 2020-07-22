@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/translate"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/menu_hamburguer"
+        android:title="Translate"></item>
+    <item
+        android:id="@+id/refresh"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/menu_hamburguer"
+        android:title="Refresh"></item>
+    <item
+        android:id="@+id/settings"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/menu_hamburguer"
+        android:title="Settings"></item>
+
+</menu>
