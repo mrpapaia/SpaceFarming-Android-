@@ -14,6 +14,7 @@
         android:background="#FF4040"
         android:gravity="center"
         android:paddingTop="20dp"
+
         android:paddingBottom="20dp"
         android:text="Controle de nitrogenio"
         android:textColor="@color/textColor"

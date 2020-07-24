@@ -101,11 +101,18 @@
             android:textSize="20dp" />
 
         <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="40dp"
+            android:id="@+id/spCanecas"
+            style="@style/Platform.Widget.AppCompat.Spinner"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
             android:layout_marginStart="235dp"
-            android:gravity="right" />
+            android:background="@color/colorPrimary"
+            android:backgroundTintMode="add"
+            android:dropDownSelector="@color/textColor"
+            android:entries="@array/spiner"
+            android:gravity="right"
+            android:popupBackground="@color/colorPrimary" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -134,10 +141,12 @@
             android:textSize="20dp" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/spRacks"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="310dp" />
+            android:layout_marginStart="310dp"
+            android:entries="@array/spiner"
+            android:popupBackground="@color/colorPrimary" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -164,10 +173,12 @@
             android:textSize="20dp" />
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/spPalhetas"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="310dp" />
+            android:layout_marginStart="310dp"
+            android:entries="@array/spiner"
+            android:popupBackground="@color/colorPrimary" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -187,7 +198,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="Cadastrar"
+            android:text="@string/confirmar"
             android:textColor="@color/textColor" />
     </androidx.cardview.widget.CardView>
 
@@ -208,7 +219,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
-            android:text="Cancelar"
+            android:text="@string/cancelar"
             android:textColor="@color/textColor" />
     </androidx.cardview.widget.CardView>
 

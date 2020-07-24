@@ -11,4 +11,29 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="responsavel">Responsavel</string>
+    <string name="nivel">Nivel</string>
+    <string name="data">Data</string>
+    <string name="telefone">Telefone</string>
+    <string name="nome">Nome</string>
+    <string name="e_mail">E-mail</string>
+    <string name="nitrogenio">Nitrogenio</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="preco">Preço</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="nivel_atual">Nivel Atual</string>
+    <string name="medir_nivel">Medir Nivel</string>
+    <string name="abastecer">Abastecer</string>
+    <string name="historico_do_botij_o">Historico do Botijão</string>
+    <string name="regua">Regua</string>
+    <string-array name="spiner">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
 </resources>

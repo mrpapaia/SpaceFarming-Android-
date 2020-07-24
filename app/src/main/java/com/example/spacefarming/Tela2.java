@@ -1,21 +1,18 @@
 package com.example.spacefarming;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Gravity;
-import android.view.MenuItem;
-import android.view.View;
-
-
 import com.example.spacefarming.entidades.Botijao;
-import com.example.spacefarming.frag.InfoBotijao;
 import com.example.spacefarming.frag.CadastroBotijao;
-import com.google.android.gms.common.internal.BaseGmsClient;
+import com.example.spacefarming.frag.InfoBotijao;
 import com.google.android.material.navigation.NavigationView;
 
 public class Tela2 extends AppCompatActivity {
@@ -29,18 +26,26 @@ public class Tela2 extends AppCompatActivity {
         myToolbar = findViewById(R.id.my_toolbar2);
         setSupportActionBar(myToolbar);
         setNavigationDrawer();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+            @Override
+            public void onBackStackChanged() {
+                shouldDisplayHomeUp();
+            }
+        });
         Intent it = getIntent();
-        if(it.getIntExtra("frag",0) == 1){
+        if (it.getIntExtra("frag", 0) == 1) {
 
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            InfoBotijao infoBotijao= new InfoBotijao();
+            InfoBotijao infoBotijao = new InfoBotijao();
             infoBotijao.setBotijao((Botijao) it.getSerializableExtra("botijao"));
             ft.add(R.id.main_frame2, infoBotijao);
+            ft.addToBackStack(null);
             ft.commit();
-        }else if(it.getIntExtra("frag",0) == 2){
+        } else if (it.getIntExtra("frag", 0) == 2) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.add(R.id.main_frame2, new CadastroBotijao());
+            ft.addToBackStack(null);
+
             ft.commit();
         }
 
@@ -61,4 +66,19 @@ public class Tela2 extends AppCompatActivity {
         });
     }
 
+
+    public void shouldDisplayHomeUp() {
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        } else {
+            finish();
+        }
+        System.out.println(getSupportFragmentManager().getBackStackEntryCount());
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        getSupportFragmentManager().popBackStack();
+        return true;
+    }
 }

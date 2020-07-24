@@ -29,7 +29,7 @@
         android:gravity="center"
         android:text="Botijão 0"
         android:textColor="@color/textColor"
-        android:textSize="40dp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,28 +40,13 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="Regua"
+        android:text="@string/regua"
         android:textColor="@color/textColor"
-        android:textSize="40dp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvInfos" />
-
-    <SeekBar
-        android:id="@+id/sb_regua"
-        android:layout_width="0dp"
-        android:layout_height="75dp"
-        android:background="@drawable/regua3"
-        android:max="45"
-        android:min="0"
-        android:thumb="@drawable/thumb_regua"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRegua"
-        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/tvInfos"
@@ -71,6 +56,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvRegua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegua"
+        app:layout_constraintVertical_bias="0.0">
+
+        <SeekBar
+            android:id="@+id/sb_regua"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/regua3"
+            android:max="45"
+            android:thumb="@drawable/thumb_regua" />
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
