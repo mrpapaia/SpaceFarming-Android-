@@ -1,4 +1,4 @@
-package com.example.spacefarming;
+package com.example.spacefarming.adapter;
 
 
 
@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.spacefarming.R;
 import com.example.spacefarming.entidades.Botijao;
 
 import java.util.List;

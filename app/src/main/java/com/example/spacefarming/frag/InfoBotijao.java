@@ -50,21 +50,27 @@ public class InfoBotijao extends Fragment {
         tvIdBotijao.setText(botijao.getId());
         sb_regua.setEnabled(false);
         sb_regua.setProgress((int) Math.round(botijao.getNivelAtual()));
-        CardView cv = v.findViewById(R.id.cvRegua);
-        cv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.main_frame2, new ControleNivel());
-                ft.addToBackStack(null);
-                ft.commit();
-            }
-        });
+        CardView cvRegua = v.findViewById(R.id.cvRegua);
+        cvRegua.setOnClickListener(reguaOnClick());
 
         return v;
     }
 
     public void setBotijao(Botijao botijao) {
         this.botijao = botijao;
+    }
+
+    protected View.OnClickListener reguaOnClick() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                ControleNivel controleNivel = new ControleNivel();
+                controleNivel.setBotijao(botijao);
+                ft.replace(R.id.main_frame2, controleNivel);
+                ft.addToBackStack(null);
+                ft.commit();
+            }
+        };
     }
 }

@@ -26,6 +26,19 @@
     <string name="abastecer">Abastecer</string>
     <string name="historico_do_botij_o">Historico do Botijão</string>
     <string name="regua">Regua</string>
+    <string name="fornecedor">Fornecedor</string>
+    <string name="endereco">Endereço</string>
+    <string name="ex_nivel">20</string>
+    <string name="desc_botijao">Botijao</string>
+    <string name="identificacao_do_botijao">Identificação do Botijão</string>
+    <string name="capacidade_de_nitrogenio_em_litros">Capacidade de nitrogênio em litros</string>
+    <string name="qtd_canecas">Quantidade de Canecas:</string>
+    <string name="qtd_racks">Quantidade de racks por caneca:</string>
+    <string name="qtd_palhetas">Quantidade de palhetas por rack:</string>
+    <string name="ex_idBotijao">Botijão 0</string>
+    <string name="controle_de_nitrogenio">Controle de nitrogenio</string>
+    <string name="abastecimento">Abastecimento</string>
+    <string name="nivel">Nivel</string>
     <string-array name="spiner">
         <item>1</item>
         <item>2</item>

@@ -73,7 +73,6 @@ public class Tela2 extends AppCompatActivity {
         } else {
             finish();
         }
-        System.out.println(getSupportFragmentManager().getBackStackEntryCount());
     }
 
     @Override

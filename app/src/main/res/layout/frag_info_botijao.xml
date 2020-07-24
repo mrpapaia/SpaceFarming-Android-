@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="Botijão 0"
+        android:text="@string/ex_idBotijao"
         android:textColor="@color/textColor"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +52,6 @@
         android:id="@+id/tvInfos"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
