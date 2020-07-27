@@ -107,7 +107,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView4">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btHistorico"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="@color/colorPrimary"

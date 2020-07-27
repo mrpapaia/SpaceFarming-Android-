@@ -35,6 +35,7 @@
                 android:id="@+id/tvNivelBotijao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/textColor"
                 app:layout_constraintBottom_toBottomOf="@+id/imgBotijao"
                 app:layout_constraintEnd_toEndOf="@+id/imgBotijao"
                 app:layout_constraintStart_toStartOf="@+id/imgBotijao"
@@ -44,6 +45,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/colorPrimary"
                 app:cardCornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="@+id/imgBotijao"
                 app:layout_constraintEnd_toEndOf="@+id/imgBotijao"
@@ -56,7 +58,8 @@
                     android:id="@+id/tvIdBotijao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center" />
+                    android:layout_gravity="center"
+                    android:textColor="@color/textColor" />
             </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

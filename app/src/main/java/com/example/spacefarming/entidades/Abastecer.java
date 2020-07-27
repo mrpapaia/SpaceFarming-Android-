@@ -4,12 +4,10 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public class Abastecer implements Serializable , Parcelable {
 	private Fornecedor fornecedor;
 	private Double nivelAnterior;
-
 	private Double nivelAtual;
 	private Double precoLitro;
 	private String data;

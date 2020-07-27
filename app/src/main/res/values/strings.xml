@@ -26,9 +26,8 @@
     <string name="abastecer">Abastecer</string>
     <string name="historico_do_botij_o">Historico do Botijão</string>
     <string name="regua">Regua</string>
-    <string name="fornecedor">Fornecedor</string>
     <string name="endereco">Endereço</string>
-    <string name="ex_nivel">20</string>
+    <string name="ex_nivel">Nivel Anteriro: 20 Nivel Atual: 20</string>
     <string name="desc_botijao">Botijao</string>
     <string name="identificacao_do_botijao">Identificação do Botijão</string>
     <string name="capacidade_de_nitrogenio_em_litros">Capacidade de nitrogênio em litros</string>
@@ -38,7 +37,24 @@
     <string name="ex_idBotijao">Botijão 0</string>
     <string name="controle_de_nitrogenio">Controle de nitrogenio</string>
     <string name="abastecimento">Abastecimento</string>
-    <string name="nivel">Nivel</string>
+
+    <string name="nome2">Nome:</string>
+    <string name="ex_nome_responsavel">Diogo jose da silva Ribeiro</string>
+    <string name="telefone2">Telefone:</string>
+    <string name="ex_telefone_responsavel">0000000000</string>
+    <string name="ex_data">20/01/2020</string>
+    <string name="ex_email">responsavel@hotmail.com</string>
+    <string name="email2">E-mail:</string>
+    <string name="nivel2">Nível Anterior:</string>
+
+    <string name="data2">Data:</string>
+    <string name="fornecedor">Fornecedor</string>
+    <string name="endereco1">Endereço:</string>
+    <string name="precoLitro">Preço Litro:</string>
+    <string name="ex_precoLitro">10.0</string>
+    <string name="pesquisar">Pesquisar</string>
+    <string name="botij_es">Botijões</string>
+    <string name="historicos">Historicos</string>
     <string-array name="spiner">
         <item>1</item>
         <item>2</item>

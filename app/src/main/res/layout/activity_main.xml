@@ -18,8 +18,7 @@
         <FrameLayout
             android:id="@+id/main_frame"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </FrameLayout>
+            android:layout_height="match_parent"></FrameLayout>
 
 
     </LinearLayout>
@@ -29,8 +28,10 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:background="@color/colorAccent"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_drawer_header"
+        app:itemTextColor="@color/textColor"
         app:menu="@menu/nav_itens" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

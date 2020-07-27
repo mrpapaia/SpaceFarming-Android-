@@ -3,9 +3,13 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/brasil"
-            android:icon="@drawable/menu_hamburguer"
-            android:title="Brasil" />
+            android:id="@+id/botijoes"
+            android:icon="@drawable/botijoes"
+            android:title="@string/botij_es" />
+        <item
+            android:id="@+id/hist"
+            android:icon="@drawable/history"
+            android:title="@string/historicos" />
 
     </group>
 

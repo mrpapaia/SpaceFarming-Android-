@@ -18,6 +18,7 @@ public class ControleNivel extends Fragment {
     private Botijao botijao;
     private Button btMedirNivel;
     private Button btAbastecerBotijao;
+    private Button btHitorico;
     private TextView tvNivelAtual;
 
 
@@ -38,11 +39,13 @@ public class ControleNivel extends Fragment {
         View v = inflater.inflate(R.layout.frag_controle_nivel, container, false);
         btMedirNivel = v.findViewById(R.id.btMedirNivel);
         btAbastecerBotijao = v.findViewById(R.id.btAbastecer);
+        btHitorico = v.findViewById(R.id.btHistorico);
         tvNivelAtual = v.findViewById(R.id.tvNivelAtual);
         tvNivelAtual.setText(botijao.getNivelAtual().toString());
 
         btMedirNivel.setOnClickListener(medirNivelOnClick());
         btAbastecerBotijao.setOnClickListener(abastecerOnClick());
+        btHitorico.setOnClickListener(historicoOnClick());
         return v;
     }
 
@@ -77,6 +80,21 @@ public class ControleNivel extends Fragment {
             }
         };
     }
+
+    protected View.OnClickListener historicoOnClick() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                Historico historico = new Historico();
+                historico.setIdBotijao(botijao.getId());
+                ft.replace(R.id.main_frame2, historico);
+                ft.addToBackStack(null);
+                ft.commit();
+            }
+        };
+    }
+
 
     public void setBotijao(Botijao botijao) {
         this.botijao = botijao;
