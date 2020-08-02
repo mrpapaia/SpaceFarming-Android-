@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:fitsSystemWindows="true"
     tools:context=".frag.ListBotijao">
 
 
@@ -12,22 +14,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/revalia_regular"
-            android:gravity="center"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:shadowColor="@color/shadowColor"
-            android:text="@string/titulo_lista"
-            android:textColor="@color/colorPrimary"
-            android:textSize="30sp"   />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
     </LinearLayout>
 
 

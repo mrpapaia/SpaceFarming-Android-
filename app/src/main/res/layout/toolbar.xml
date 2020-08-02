@@ -4,12 +4,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/my_toolbar"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_margin="5dp"
+    android:background="@color/backgroundBotijao"
     android:theme="@style/ThemeOverlay.AppCompat"
-
+    app:layout_scrollFlags="scroll|enterAlways"
+    app:layout_collapseMode="pin"
+    app:layout_collapseParallaxMultiplier="0.5"
     app:navigationIcon="@drawable/menu_hamburguer"
     app:navigationContentDescription="Barra de Navegação"
     app:title="@string/app_name"
-    app:titleTextColor="#FFF">
+    app:titleTextColor="@color/colorPrimary">
+
 </androidx.appcompat.widget.Toolbar>
