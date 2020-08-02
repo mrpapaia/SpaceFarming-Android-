@@ -2,26 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="10dp"
+    android:layout_width="155dp"
+    android:layout_height="155dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="30dp"
+    android:background="@color/background"
     tools:context=".adapter.ListBotijaoAdapter">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="2dp">
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/background_botijao"
+        android:elevation="4dp"
+        app:cardCornerRadius="12dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="150dp"
+            android:layout_height="150dp">
 
             <ImageView
                 android:id="@+id/imgBotijao"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:background="@color/colorAccent"
+                android:layout_width="159dp"
+                android:layout_height="130dp"
                 android:contentDescription="@string/desc_botijao"
                 android:src="@drawable/botijao2"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -35,7 +37,8 @@
                 android:id="@+id/tvNivelBotijao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/textColor"
+                android:fontFamily="@font/revalia_regular"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@+id/imgBotijao"
                 app:layout_constraintEnd_toEndOf="@+id/imgBotijao"
                 app:layout_constraintStart_toStartOf="@+id/imgBotijao"
@@ -45,11 +48,11 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:layout_marginTop="100dp"
                 app:cardBackgroundColor="@color/colorPrimary"
-                app:cardCornerRadius="20dp"
-                app:layout_constraintBottom_toBottomOf="@+id/imgBotijao"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/imgBotijao"
-                app:layout_constraintHorizontal_bias="0.464"
                 app:layout_constraintStart_toStartOf="@+id/imgBotijao"
                 app:layout_constraintTop_toTopOf="@+id/imgBotijao"
                 app:layout_constraintVertical_bias="1.0">
@@ -59,6 +62,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="@font/revalia_regular"
                     android:textColor="@color/textColor" />
             </androidx.cardview.widget.CardView>
 
