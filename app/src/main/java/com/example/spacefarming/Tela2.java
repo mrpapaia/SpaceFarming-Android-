@@ -3,6 +3,7 @@ package com.example.spacefarming;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -26,12 +27,16 @@ public class Tela2 extends AppCompatActivity {
         myToolbar = findViewById(R.id.my_toolbar2);
         setSupportActionBar(myToolbar);
         setNavigationDrawer();
-        getSupportFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+        myToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
-            public void onBackStackChanged() {
-                shouldDisplayHomeUp();
+            public boolean onMenuItemClick(MenuItem item) {
+                if(item.getItemId()==R.id.ibBack){
+                    shouldDisplayHomeUp();
+                }
+                return false;
             }
         });
+       
         Intent it = getIntent();
         if (it.getIntExtra("frag", 0) == 1) {
 
@@ -69,7 +74,7 @@ public class Tela2 extends AppCompatActivity {
 
     public void shouldDisplayHomeUp() {
         if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportFragmentManager().popBackStack();
         } else {
             finish();
         }

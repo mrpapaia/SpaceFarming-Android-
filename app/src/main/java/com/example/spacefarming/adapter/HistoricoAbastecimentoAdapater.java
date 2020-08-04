@@ -37,7 +37,8 @@ public class HistoricoAbastecimentoAdapater extends RecyclerView.Adapter<Histori
     public void onBindViewHolder(@NonNull HistoricoAbastecerviewHolder holder, int position) {
         Abastecer abastecer = list.get(position);
         holder.tvIdBotijao.setText(abastecer.getBotijao());
-        holder.tvAbastecimento.setText("Nivel Anterior: " + abastecer.getNivelAnterior().toString() + " Nivel Atual: " + abastecer.getNivelAtual().toString());
+        holder.tvNivelAnterior.setText(abastecer.getNivelAnterior().toString());
+        holder.tvNivelAtual.setText(abastecer.getNivelAtual().toString());
         holder.tvNomeResponsavel.setText(abastecer.getResponsavel().getNome());
         holder.tvEmailResponsavel.setText(abastecer.getResponsavel().getEmail());
         holder.tvTelefoneResponsavel.setText(abastecer.getResponsavel().getTelefone());
@@ -55,7 +56,8 @@ public class HistoricoAbastecimentoAdapater extends RecyclerView.Adapter<Histori
 
     public static class HistoricoAbastecerviewHolder extends RecyclerView.ViewHolder {
         TextView tvIdBotijao;
-        TextView tvAbastecimento;
+        TextView tvNivelAnterior;
+        TextView tvNivelAtual;
         TextView tvNomeResponsavel;
         TextView tvTelefoneResponsavel;
         TextView tvEmailResponsavel;
@@ -71,7 +73,8 @@ public class HistoricoAbastecimentoAdapater extends RecyclerView.Adapter<Histori
             super(itemView);
             this.view = itemView;
             tvIdBotijao = view.findViewById(R.id.tvIdBotijao2);
-            tvAbastecimento = view.findViewById(R.id.tvAbastecimento);
+            tvNivelAnterior = view.findViewById(R.id.tvNivelAnterior);
+            tvNivelAtual = view.findViewById(R.id.tvNivelAtual);
             tvNomeResponsavel = view.findViewById(R.id.tvNomeResponsavel);
             tvTelefoneResponsavel = view.findViewById(R.id.tvTelefoneResponsavel);
             tvEmailResponsavel = view.findViewById(R.id.tvEmailResponsavel);

@@ -3,9 +3,10 @@
     <color name="colorPrimary">#F44336</color>
     <color name="colorPrimaryDark">#cc0000</color>
     <color name="colorAccent">#ff5252</color>
-    <color name="textColor">#FFFFFF</color>
+    <color name="textColor">#F8F8FB</color>
     <color name="backgroundBotijao">#F8F8FB</color>
     <color name="black">#000000</color>
     <color name="background">#E5E7EC</color>
     <color name="shadowColor">#40000000</color>
+    <color name="textColor2">#716F89</color>
 </resources>

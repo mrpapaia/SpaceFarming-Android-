@@ -4,239 +4,238 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
-    android:elevation="0dp"
-    tools:context=".frag.CadastroBotijao">
+    android:background="@color/background">
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvID"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/colorPrimaryDark"
-        app:cardCornerRadius="20dp"
-        app:hintAnimationEnabled="true"
-        app:hintEnabled="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/revalia_regular"
+        android:text="Cadastrar Botijao"
+        android:textColor="@color/colorPrimary"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView9"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="18dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView29">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tiIdBotijao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:background="@color/colorPrimary"
-            android:hint="@string/identificacao_do_botijao"
-            android:textColorHint="@color/textColor"
-            app:hintAnimationEnabled="true"
-            app:hintEnabled="true"
-            app:hintTextColor="@color/textColor">
+            android:textColorHint="@color/textColor2"
+            app:startIconDrawable="@drawable/ico_botijao"
+            app:startIconTint="@color/colorPrimary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/textColor" />
+                android:layout_height="match_parent"
+                android:fontFamily="@font/revalia_regular"
+                android:hint="@string/identificacao_do_botijao"
+                android:textColor="@color/textColor2"
+                android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
 
-
     <androidx.cardview.widget.CardView
-        android:id="@+id/cvCapacidade"
-        android:layout_width="match_parent"
+        android:id="@+id/cardView10"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:cardBackgroundColor="@color/colorPrimaryDark"
-        app:cardCornerRadius="20dp"
-        app:hintTextColor="@color/textColor"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="18dp"
+        app:cardCornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvID">
+        app:layout_constraintTop_toBottomOf="@+id/cardView9">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tiCapacidadeBotijao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorPrimary"
-            android:hint="@string/capacidade_de_nitrogenio_em_litros"
-            android:textColorHint="@color/textColor"
-            app:counterTextColor="@color/textColor"
-            app:errorTextColor="@color/textColor"
-            app:helperTextTextColor="@color/textColor"
-            app:hintTextColor="@color/textColor">
+            android:textColorHint="@color/textColor2"
+            app:startIconDrawable="@drawable/ico_capacidade"
+            app:startIconTint="@color/colorPrimary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/textColor"
-                android:textColorHint="@color/textColor" />
+                android:fontFamily="@font/revalia_regular"
+                android:hint="@string/capacidade_de_nitrogenio_em_litros"
+                android:textColor="@color/textColor2"
+                android:textSize="12sp" />
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
 
-
     <androidx.cardview.widget.CardView
-
-        android:id="@+id/cvQtdCaneca"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:orientation="horizontal"
-        app:cardBackgroundColor="@color/colorPrimary"
-        app:cardCornerRadius="20dp"
+        android:id="@+id/cardView11"
+        android:layout_width="340dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="18dp"
+        app:cardCornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvCapacidade">
+        app:layout_constraintTop_toBottomOf="@+id/cardView10">
 
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvQtdCanecas"
+                android:id="@+id/textView30"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginStart="10dp"
+                android:fontFamily="@font/revalia_regular"
+                android:gravity="center"
                 android:text="@string/qtd_canecas"
-                android:textColor="@color/textColor"
-                android:textSize="20sp" />
+                android:textColor="@color/textColor2"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Spinner
                 android:id="@+id/spCanecas"
-                style="@style/Platform.Widget.AppCompat.Spinner"
-                android:layout_width="38dp"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:backgroundTintMode="add"
-                android:dropDownSelector="@color/textColor"
-                android:entries="@array/spiner"
-                android:popupBackground="@color/colorPrimary" />
-        </LinearLayout>
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView30"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-
-        android:id="@+id/cvQtdRacks"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/cardView12"
+        android:layout_width="340dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="18dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/regua3"
-        android:orientation="horizontal"
-        app:cardBackgroundColor="@color/colorPrimary"
-        app:cardCornerRadius="20dp"
+        android:layout_marginEnd="18dp"
+        app:cardCornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvQtdCaneca">
+        app:layout_constraintTop_toBottomOf="@+id/cardView11">
 
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
             <TextView
-
-                android:id="@+id/tvQtdRacks"
+                android:id="@+id/textView32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
+                android:fontFamily="@font/revalia_regular"
+                android:gravity="center"
                 android:text="@string/qtd_racks"
-                android:textColor="@color/textColor"
-                android:textSize="20sp" />
+                android:textColor="@color/textColor2"
+                android:textSize="13dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Spinner
                 android:id="@+id/spRacks"
-                android:layout_width="40dp"
+                android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:entries="@array/spiner"
-                android:popupBackground="@color/colorPrimary" />
-        </LinearLayout>
-
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView32"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-
-
-        android:id="@+id/cvQtdOalhetas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/cardView13"
+        android:layout_width="340dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="18dp"
         android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        app:cardBackgroundColor="@color/colorPrimary"
-        app:cardCornerRadius="20dp"
+        android:layout_marginEnd="18dp"
+        app:cardCornerRadius="13dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvQtdRacks">
+        app:layout_constraintTop_toBottomOf="@+id/cardView12">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/tvQtdPalhetas"
+                android:id="@+id/textView31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
+                android:fontFamily="@font/revalia_regular"
                 android:text="@string/qtd_palhetas"
-                android:textColor="@color/textColor"
-                android:textSize="20sp" />
+                android:textColor="@color/textColor2"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Spinner
                 android:id="@+id/spPalhetas"
-                android:layout_width="40dp"
+                android:layout_width="45dp"
                 android:layout_height="wrap_content"
-                android:entries="@array/spiner"
-                android:popupBackground="@color/colorPrimary" />
-        </LinearLayout>
-
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView31"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvCadastrar"
-        android:layout_width="300dp"
+    <Button
+        android:id="@+id/btCadastrar"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="100dp"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="86dp"
+        android:background="@drawable/btfundo"
+        android:fontFamily="@font/revalia_regular"
+        android:text="@string/confirmar"
+        android:textColor="@color/textColor"
+        android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvQtdOalhetas">
+        app:layout_constraintTop_toBottomOf="@+id/cardView13" />
 
-        <Button
-            android:id="@+id/btCadastrar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:text="@string/confirmar"
-            android:textColor="@color/textColor" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvCancelar"
-        android:layout_width="300dp"
+    <Button
+        android:id="@+id/btCancelar"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="100dp"
-        app:cardCornerRadius="20dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/btfundo"
+        android:fontFamily="@font/revalia_regular"
+        android:text="@string/cancelar"
+        android:textColor="@color/textColor"
+        android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cvCadastrar">
-
-        <Button
-            android:id="@+id/btCancelar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:text="@string/cancelar"
-            android:textColor="@color/textColor" />
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintStart_toEndOf="@+id/btCadastrar"
+        app:layout_constraintTop_toBottomOf="@+id/cardView13" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

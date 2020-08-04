@@ -64,7 +64,7 @@ public class HistoricoNivelAdapater extends RecyclerView.Adapter<HistoricoNivelA
             this.view = itemView;
             tvIdBotijao = view.findViewById(R.id.tvIdBotijao2);
             tvNivel = view.findViewById(R.id.tvNivel);
-            tvNomeResponsavel = view.findViewById(R.id.tvNomeFornecedor);
+            tvNomeResponsavel = view.findViewById(R.id.tvNomeResponsavel);
             tvTelefoneResponsavel = view.findViewById(R.id.tvTelefoneResponsavel);
             tvEmailResponsavel = view.findViewById(R.id.tvEmailResponsavel);
             tvData = view.findViewById(R.id.tvData);

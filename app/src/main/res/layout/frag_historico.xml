@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/background"
     tools:context=".frag.Historico">
 
     <androidx.viewpager.widget.ViewPager
@@ -20,9 +21,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/colorPrimary"
-        app:tabIndicatorColor="@color/colorAccent"
-        app:tabTextColor="@color/textColor">
+        android:layout_margin="10dp"
+        android:background="@color/textColor"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabRippleColor="@color/colorPrimary"
+        app:tabTextColor="@color/colorPrimary">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"

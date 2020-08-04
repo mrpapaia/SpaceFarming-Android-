@@ -1,428 +1,385 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="10dp"
-    android:orientation="vertical"
+    android:background="@color/background"
     tools:context=".adapter.HistoricoNivelAdapater">
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvIdBotijao2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/revalia_regular"
+            android:text="@string/ex_idBotijao"
+            android:textColor="@color/colorPrimary"
+            android:textSize="32sp" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="400dp"
-        android:layout_height="550dp"
-        android:layout_gravity="center"
-        app:cardBackgroundColor="@color/colorPrimary"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="10dp">
+        android:id="@+id/cardView8"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_margin="10dp">
 
             <TextView
-                android:id="@+id/tvIdBotijao2"
+                android:id="@+id/tvNivelAnterior"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/ex_nivel1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.79"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/ex_idBotijao"
-                android:textSize="30sp" />
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="11dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="Nivel Anterior:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="350dp"
-                android:layout_height="500dp"
-                android:layout_gravity="center"
-                app:cardBackgroundColor="@color/colorAccent"
-                app:cardCornerRadius="20dp">
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="13dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="Nome do responsavel:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.032"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    app:cardBackgroundColor="@color/colorPrimary"
-                    app:cardCornerRadius="20dp">
+            <TextView
+                android:id="@+id/tvNomeResponsavel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/ex_nome_responsavel"
+                android:textColor="@color/textColor2"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="238dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/telefone2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNomeResponsavel" />
 
-                        <TextView
-                            android:id="@+id/tvAbastecimento"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="@string/ex_nivel"
-                            android:textSize="18sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.52"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.0" />
+            <TextView
+                android:id="@+id/tvTelefoneResponsavel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/ex_telefone_responsavel"
+                android:textColor="@color/textColor2"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-                        <View
-                            android:id="@+id/divider01"
-                            android:layout_width="match_parent"
-                            android:layout_height="5dp"
-                            android:layout_marginTop="15dp"
-                            android:background="@color/textColor"
-                            android:backgroundTint="@color/textColor"
-                            app:layout_constraintTop_toBottomOf="@+id/tvAbastecimento" />
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="E-mail:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTelefoneResponsavel" />
 
-                        <TextView
-                            android:id="@+id/tvFornecedor"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:text="@string/fornecedor"
-                            android:textSize="24sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/divider01" />
+            <TextView
+                android:id="@+id/tvEmailResponsavel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/ex_email"
+                android:textColor="@color/textColor2"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
-                        <LinearLayout
-                            android:id="@+id/layNivel"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="40dp"
-                            android:layout_marginEnd="10dp"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/tvFornecedor"
-                            app:layout_constraintVertical_bias="0.0">
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/data2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmailResponsavel" />
 
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                app:cardBackgroundColor="@color/colorAccent"
-                                app:cardCornerRadius="20dp">
+            <TextView
+                android:id="@+id/tvData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/ex_data"
+                android:textColor="@color/textColor2"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="Nivel Atual:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center"
-                                        android:orientation="horizontal"
-                                        tools:ignore="TooDeepLayout">
+            <TextView
+                android:id="@+id/tvNivelAtual"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="111dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/ex_nivel1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="21sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView16"
+                app:layout_constraintTop_toBottomOf="@+id/tvNivelAnterior" />
 
-                                        <TextView
-                                            android:id="@+id/text1"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginEnd="10dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="@string/nome2"
-                                            android:textSize="20sp" />
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="9dp"
+                android:background="@color/textColor2"
+                android:backgroundTint="@color/textColor2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
-                                        <TextView
-                                            android:id="@+id/tvNomeFornecedor"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:text="@string/ex_nome_responsavel"
-                                            android:textSize="17sp" />
-                                    </LinearLayout>
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="23dp"
+                android:background="@color/textColor2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvData" />
 
-                                    <View
-                                        android:id="@+id/divider8"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="5dp"
-                                        android:layout_marginTop="5dp"
-                                        android:background="@color/textColor"
-                                        android:backgroundTint="@color/textColor" />
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="200dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="Nome do Fornecedor:"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center"
-                                        android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvNomeFornecedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/ex_nome_responsavel"
+                android:textColor="@color/textColor2"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/telefone2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNomeFornecedor" />
 
-                                        <TextView
-                                            android:id="@+id/textVie222"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginEnd="10dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="@string/telefone2"
-                                            android:textSize="20sp" />
+            <TextView
+                android:id="@+id/tvTelefoneFornecedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/ex_telefone_responsavel"
+                android:textColor="@color/textColor2"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/endereco1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTelefoneFornecedor" />
 
-                                        <TextView
-                                            android:id="@+id/tvTelefoneFornecedor"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:text="@string/ex_telefone_responsavel"
-                                            android:textSize="20sp" />
-                                    </LinearLayout>
+            <TextView
+                android:id="@+id/tvEnderecoFornecedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="Rua 2 quadra 1 lote 21"
+                android:textColor="@color/textColor2"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
-                                    <View
-                                        android:id="@+id/divider9"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="5dp"
-                                        android:layout_marginTop="5dp"
-                                        android:background="@color/textColor"
-                                        android:backgroundTint="@color/textColor" />
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="262dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/precoLitro"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEnderecoFornecedor" />
 
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center"
-                                        android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvPrecoLitro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/revalia_regular"
+                android:text="@string/ex_precoLitro"
+                android:textColor="@color/textColor2"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
-                                        <TextView
-                                            android:id="@+id/textView210"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginEnd="10dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="@string/endereco1"
-                                            android:textSize="17sp" />
-
-
-                                        <TextView
-                                            android:id="@+id/tvEnderecoFornecedor"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:text="@string/ex_email"
-                                            android:textSize="17sp" />
-                                    </LinearLayout>
-
-                                    <View
-                                        android:id="@+id/divider61"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="5dp"
-                                        android:layout_marginTop="5dp"
-                                        android:background="@color/textColor"
-                                        android:backgroundTint="@color/textColor" />
-
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center"
-                                        android:orientation="horizontal">
-
-                                        <TextView
-                                            android:id="@+id/textView170"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginEnd="10dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="@string/precoLitro"
-                                            android:textSize="20sp" />
-
-                                        <TextView
-                                            android:id="@+id/tvPrecoLitro"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:text="@string/ex_precoLitro"
-                                            android:textSize="20sp" />
-                                    </LinearLayout>
-                                </LinearLayout>
-                            </androidx.cardview.widget.CardView>
-                        </LinearLayout>
-
-                        <View
-                            android:id="@+id/divider"
-                            android:layout_width="match_parent"
-                            android:layout_height="5dp"
-                            android:layout_marginTop="15dp"
-                            android:background="@color/textColor"
-                            android:backgroundTint="@color/textColor"
-                            app:layout_constraintTop_toBottomOf="@+id/layNivel" />
-
-                        <TextView
-                            android:id="@+id/textView16"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="86dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="76dp"
-                            android:layout_marginBottom="165dp"
-                            android:text="@string/responsavel"
-                            android:textSize="24sp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/divider"
-                            app:layout_constraintVertical_bias="0.0" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="10dp"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/textView16"
-                            app:layout_constraintVertical_bias="0.0">
-
-                            <androidx.cardview.widget.CardView
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                app:cardBackgroundColor="@color/colorAccent"
-                                app:cardCornerRadius="20dp">
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:orientation="vertical">
-
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center"
-                                        android:orientation="horizontal"
-                                        tools:ignore="TooDeepLayout">
-
-                                        <TextView
-                                            android:id="@+id/text17"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginEnd="10dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="@string/nome2"
-                                            android:textSize="20sp" />
-
-                                        <TextView
-                                            android:id="@+id/tvNomeResponsavel"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:text="@string/ex_nome_responsavel"
-                                            android:textSize="17sp" />
-                                    </LinearLayout>
-
-                                    <View
-                                        android:id="@+id/divider4"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="5dp"
-                                        android:layout_marginTop="5dp"
-                                        android:background="@color/textColor"
-                                        android:backgroundTint="@color/textColor" />
-
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center"
-                                        android:orientation="horizontal">
-
-
-                                        <TextView
-                                            android:id="@+id/textView19"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginEnd="10dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="@string/telefone2"
-                                            android:textSize="20sp" />
-
-
-                                        <TextView
-                                            android:id="@+id/tvTelefoneResponsavel"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:text="@string/ex_telefone_responsavel"
-                                            android:textSize="20sp" />
-                                    </LinearLayout>
-
-                                    <View
-                                        android:id="@+id/divider5"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="5dp"
-                                        android:layout_marginTop="5dp"
-                                        android:background="@color/textColor"
-                                        android:backgroundTint="@color/textColor" />
-
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center"
-                                        android:orientation="horizontal">
-
-                                        <TextView
-                                            android:id="@+id/textView21"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginEnd="10dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="@string/email2"
-                                            android:textSize="20sp" />
-
-
-                                        <TextView
-                                            android:id="@+id/tvEmailResponsavel"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:text="@string/ex_email"
-                                            android:textSize="17sp" />
-                                    </LinearLayout>
-
-                                    <View
-                                        android:id="@+id/divider6"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="5dp"
-                                        android:layout_marginTop="5dp"
-                                        android:background="@color/textColor"
-                                        android:backgroundTint="@color/textColor" />
-
-                                    <LinearLayout
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="match_parent"
-                                        android:layout_gravity="center"
-                                        android:orientation="horizontal">
-
-                                        <TextView
-                                            android:id="@+id/textView17"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginEnd="10dp"
-                                            android:layout_weight="1"
-                                            android:gravity="center"
-                                            android:text="@string/data2"
-                                            android:textSize="20sp" />
-
-                                        <TextView
-                                            android:id="@+id/tvData"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_weight="1"
-                                            android:text="@string/ex_data"
-                                            android:textSize="20sp" />
-                                    </LinearLayout>
-                                </LinearLayout>
-                            </androidx.cardview.widget.CardView>
-                        </LinearLayout>
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
-
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
