@@ -43,10 +43,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/revalia_regular"
+                android:fontFamily="@font/robot_regular"
                 android:hint="@string/identificacao_do_botijao"
                 android:textColor="@color/textColor2"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
 
@@ -74,10 +74,10 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/revalia_regular"
+                android:fontFamily="@font/robot_regular"
                 android:hint="@string/capacidade_de_nitrogenio_em_litros"
                 android:textColor="@color/textColor2"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
         </com.google.android.material.textfield.TextInputLayout>
     </androidx.cardview.widget.CardView>
 
@@ -102,7 +102,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginStart="10dp"
-                android:fontFamily="@font/revalia_regular"
+                android:fontFamily="@font/robot_regular"
                 android:gravity="center"
                 android:text="@string/qtd_canecas"
                 android:textColor="@color/textColor2"
@@ -118,6 +118,7 @@
                 android:layout_marginEnd="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/textView30"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -145,11 +146,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:fontFamily="@font/revalia_regular"
+                android:fontFamily="@font/robot_regular"
                 android:gravity="center"
                 android:text="@string/qtd_racks"
                 android:textColor="@color/textColor2"
-                android:textSize="13dp"
+                android:textSize="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -161,6 +162,7 @@
                 android:layout_marginEnd="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/textView32"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -187,10 +189,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:fontFamily="@font/revalia_regular"
+                android:fontFamily="@font/robot_regular"
                 android:text="@string/qtd_palhetas"
                 android:textColor="@color/textColor2"
-                android:textSize="13sp"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -203,6 +205,7 @@
                 android:layout_marginEnd="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/textView31"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -215,7 +218,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="86dp"
         android:background="@drawable/btfundo"
-        android:fontFamily="@font/revalia_regular"
+        android:fontFamily="@font/robot_regular"
         android:text="@string/confirmar"
         android:textColor="@color/textColor"
         android:textSize="18dp"
@@ -230,7 +233,7 @@
         android:layout_marginTop="86dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/btfundo"
-        android:fontFamily="@font/revalia_regular"
+        android:fontFamily="@font/robot_regular"
         android:text="@string/cancelar"
         android:textColor="@color/textColor"
         android:textSize="18dp"

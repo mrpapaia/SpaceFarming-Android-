@@ -71,14 +71,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:hint="@string/nome"
-                    android:textColorHint="@color/colorPrimary"
+                    android:textColorHint="@color/textColor2"
                     app:startIconDrawable="@drawable/ico_nome"
                     app:startIconTint="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/robot_regular"
+                        android:hint="@string/nome"
                         android:singleLine="false"
                         android:textColorLink="@color/colorPrimary" />
                 </com.google.android.material.textfield.TextInputLayout>
@@ -87,15 +88,15 @@
                     android:id="@+id/tiEmailResponsavel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/e_mail"
-                    android:textColorHint="@color/colorPrimary"
+                    android:textColorHint="@color/textColor2"
                     app:startIconDrawable="@drawable/ico_email"
                     app:startIconTint="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="hint" />
+                        android:fontFamily="@font/robot_regular"
+                        android:hint="@string/e_mail" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -103,14 +104,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="45dp"
-                    android:hint="@string/telefone"
-                    android:textColorHint="@color/colorPrimary"
+                    android:textColorHint="@color/textColor2"
                     app:startIconDrawable="@drawable/ico_fone"
                     app:startIconTint="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robot_regular"
+                        android:hint="@string/telefone" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
@@ -152,42 +154,45 @@
                     android:id="@+id/tiNomeFornecedor"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/nome"
-                    android:textColorHint="@color/colorPrimary"
+                    android:textColorHint="@color/textColor2"
                     app:startIconDrawable="@drawable/ico_nome"
                     app:startIconTint="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robot_regular"
+                        android:hint="@string/nome" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tiTelefoneFornecedor"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/telefone"
-                    android:textColorHint="@color/colorPrimary"
+                    android:textColorHint="@color/textColor2"
                     app:startIconDrawable="@drawable/ico_fone"
                     app:startIconTint="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robot_regular"
+                        android:hint="@string/telefone" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tiEnderecoFornecedor"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/endereco"
-                    android:textColorHint="@color/colorPrimary"
+                    android:textColorHint="@color/textColor2"
                     app:startIconDrawable="@drawable/ico_endereco"
                     app:startIconTint="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robot_regular"
+                        android:hint="@string/endereco" />
                 </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -215,42 +220,45 @@
                     android:id="@+id/tiNivel"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/nivel"
-                    android:textColorHint="@color/colorPrimary"
+                    android:textColorHint="@color/textColor2"
                     app:startIconDrawable="@drawable/ico_nivel"
                     app:startIconTint="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robot_regular"
+                        android:hint="@string/nivel" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tiData"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="@string/data"
-                    android:textColorHint="@color/colorPrimary"
+                    android:textColorHint="@color/textColor2"
                     app:startIconDrawable="@drawable/ic_ico_data"
                     app:startIconTint="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robot_regular"
+                        android:hint="@string/data" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/tiPreco"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/preco"
-                    android:textColorHint="@color/colorPrimary"
+                    android:textColorHint="@color/textColor2"
                     app:startIconDrawable="@drawable/ico_preco"
                     app:startIconTint="@color/colorPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/robot_regular"
+                        android:hint="@string/preco" />
                 </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
@@ -262,7 +270,7 @@
             android:layout_height="44dp"
             android:layout_marginTop="37dp"
             android:background="@drawable/btfundo"
-            android:fontFamily="@font/revalia_regular"
+            android:fontFamily="@font/robot_regular"
             android:text="@string/confirmar"
             android:textColor="@color/textColor"
             app:layout_constraintEnd_toStartOf="@+id/btCancelar"
@@ -275,7 +283,7 @@
             android:layout_height="44dp"
             android:layout_marginTop="37dp"
             android:background="@drawable/btfundo"
-            android:fontFamily="@font/revalia_regular"
+            android:fontFamily="@font/robot_bold"
             android:text="@string/cancelar"
             android:textColor="@color/textColor"
             app:layout_constraintEnd_toEndOf="parent"
