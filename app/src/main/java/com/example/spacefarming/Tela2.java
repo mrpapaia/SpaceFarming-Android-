@@ -2,8 +2,10 @@ package com.example.spacefarming;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -27,15 +29,7 @@ public class Tela2 extends AppCompatActivity {
         myToolbar = findViewById(R.id.my_toolbar2);
         setSupportActionBar(myToolbar);
         setNavigationDrawer();
-        myToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                if(item.getItemId()==R.id.ibBack){
-                    shouldDisplayHomeUp();
-                }
-                return false;
-            }
-        });
+
        
         Intent it = getIntent();
         if (it.getIntExtra("frag", 0) == 1) {
@@ -56,6 +50,20 @@ public class Tela2 extends AppCompatActivity {
 
 
     }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu2, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.ibBack) {
+            shouldDisplayHomeUp();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     private void setNavigationDrawer() {
         dLayout = findViewById(R.id.drawer_layout2);
@@ -73,10 +81,13 @@ public class Tela2 extends AppCompatActivity {
 
 
     public void shouldDisplayHomeUp() {
-        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+        System.out.println(getSupportFragmentManager().getBackStackEntryCount());
+        if (getSupportFragmentManager().getBackStackEntryCount() >1) {
             getSupportFragmentManager().popBackStack();
+
         } else {
             finish();
+
         }
     }
 

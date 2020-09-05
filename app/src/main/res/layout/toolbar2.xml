@@ -21,15 +21,6 @@
             android:layout_margin="10dp"
             app:srcCompat="@drawable/logo"></ImageView>
 
-        <ImageButton
-            android:id="@+id/ibBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="200dp"
-            android:background="@color/background"
-            android:src="@drawable/back">
 
-        </ImageButton>
     </LinearLayout>
 </androidx.appcompat.widget.Toolbar>
