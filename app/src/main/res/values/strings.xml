@@ -57,6 +57,10 @@
     <string name="historicos">Historicos</string>
     <string name="titulo_lista">Lista de Botijões</string>
     <string name="ex_nivel1">0.0</string>
+    <string name="senha">Senha</string>
+    <string name="login">Login</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="sair">Sair</string>
     <string-array name="spiner">
         <item>1</item>
         <item>2</item>

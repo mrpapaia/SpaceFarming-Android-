@@ -9,7 +9,12 @@
         <item
             android:id="@+id/hist"
             android:icon="@drawable/history"
-            android:title="@string/historicos" />
+            android:title="@string/historicos"/>
+        <item
+            android:id="@+id/exit"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/sair"/>
+
 
     </group>
 

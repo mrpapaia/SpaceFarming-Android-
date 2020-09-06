@@ -19,6 +19,8 @@ import com.example.spacefarming.services.RetrofitCfg;
 
 public class NivelDAO implements  InterfaceNivelDAO<Nivel>{
     static String TAG="NivelDAO";
+    private InterfaceCallback.ApiCallbackList callback;
+    private String all;
 
     @Override
     public void getById(final InterfaceCallback.ApiCallbackList callback, String idBotijao) {
@@ -58,6 +60,7 @@ public class NivelDAO implements  InterfaceNivelDAO<Nivel>{
 
     @Override
     public void list(final InterfaceCallback.ApiCallbackList callback) {
+
         Call<List<Nivel>> call = new RetrofitCfg().nivelServices().list();
         call.enqueue(new Callback<List<Nivel>>() {
             @Override

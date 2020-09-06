@@ -42,19 +42,33 @@ public class HistoricoNivel extends Fragment {
         recyclerView = v.findViewById(R.id.rvHist);
         listNivel = new ArrayList<>();
         NivelDAO nivelDAO = new NivelDAO();
-
-        nivelDAO.getById(new InterfaceCallback.ApiCallbackList() {
-            @Override
-            public void onCallback(List<Object> list) {
-                for (Object nivel : list) {
-                    listNivel.add((Nivel) nivel);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
-                    recyclerView.setHasFixedSize(true);
-                    HistoricoNivelAdapater adapater = new HistoricoNivelAdapater(listNivel, getContext());
-                    recyclerView.setAdapter(adapater);
+        if(idBotijao == null) {
+            nivelDAO.list(new InterfaceCallback.ApiCallbackList() {
+                @Override
+                public void onCallback(List<Object> list) {
+                    for (Object nivel : list) {
+                        listNivel.add((Nivel) nivel);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
+                        recyclerView.setHasFixedSize(true);
+                        HistoricoNivelAdapater adapater = new HistoricoNivelAdapater(listNivel, getContext());
+                        recyclerView.setAdapter(adapater);
+                    }
                 }
-            }
-        }, this.idBotijao);
+            });
+        } else{
+            nivelDAO.getById(new InterfaceCallback.ApiCallbackList() {
+                @Override
+                public void onCallback(List<Object> list) {
+                    for (Object nivel : list) {
+                        listNivel.add((Nivel) nivel);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
+                        recyclerView.setHasFixedSize(true);
+                        HistoricoNivelAdapater adapater = new HistoricoNivelAdapater(listNivel, getContext());
+                        recyclerView.setAdapter(adapater);
+                    }
+                }
+            }, this.idBotijao);
+        }
 
         return v;
     }

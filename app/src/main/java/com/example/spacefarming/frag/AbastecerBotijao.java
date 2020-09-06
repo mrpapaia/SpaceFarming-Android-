@@ -55,7 +55,7 @@ public class AbastecerBotijao extends Fragment {
         View v = inflater.inflate(R.layout.frag_abaster_botijao, container, false);
         tiNomeResponsavel = v.findViewById(R.id.tiNomeResponsavel);
         tiTelefoneResponsavel = v.findViewById(R.id.tiTelefoneResponsavel);
-        tiEmailResponsavel = v.findViewById(R.id.tiEmailResponsavel);
+        tiEmailResponsavel = v.findViewById(R.id.tiSenha);
         tiNomeFornecedor = v.findViewById(R.id.tiNomeFornecedor);
         tiTelefoneFornecedor = v.findViewById(R.id.tiTelefoneFornecedor);
         tiEnderecoFornecedor = v.findViewById(R.id.tiEnderecoFornecedor);

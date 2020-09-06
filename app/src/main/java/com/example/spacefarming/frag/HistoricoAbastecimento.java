@@ -42,19 +42,33 @@ public class HistoricoAbastecimento extends Fragment {
         recyclerView = v.findViewById(R.id.rvHist);
         listAbastecimento = new ArrayList<>();
         AbastecerDAO abastecerDAO = new AbastecerDAO();
-
-        abastecerDAO.getById(new InterfaceCallback.ApiCallbackList() {
-            @Override
-            public void onCallback(List<Object> list) {
-                for (Object abastecimento : list) {
-                    listAbastecimento.add((Abastecer) abastecimento);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
-                    recyclerView.setHasFixedSize(true);
-                    HistoricoAbastecimentoAdapater adapater = new HistoricoAbastecimentoAdapater(listAbastecimento, getContext());
-                    recyclerView.setAdapter(adapater);
+        if(idBotijao==null) {
+            abastecerDAO.list(new InterfaceCallback.ApiCallbackList() {
+                @Override
+                public void onCallback(List<Object> list) {
+                    for (Object abastecimento : list) {
+                        listAbastecimento.add((Abastecer) abastecimento);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
+                        recyclerView.setHasFixedSize(true);
+                        HistoricoAbastecimentoAdapater adapater = new HistoricoAbastecimentoAdapater(listAbastecimento, getContext());
+                        recyclerView.setAdapter(adapater);
+                    }
                 }
-            }
-        }, this.idBotijao);
+            });
+        }else{
+            abastecerDAO.getById(new InterfaceCallback.ApiCallbackList() {
+                @Override
+                public void onCallback(List<Object> list) {
+                    for (Object abastecimento : list) {
+                        listAbastecimento.add((Abastecer) abastecimento);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
+                        recyclerView.setHasFixedSize(true);
+                        HistoricoAbastecimentoAdapater adapater = new HistoricoAbastecimentoAdapater(listAbastecimento, getContext());
+                        recyclerView.setAdapter(adapater);
+                    }
+                }
+            }, this.idBotijao);
+        }
 
         return v;
     }

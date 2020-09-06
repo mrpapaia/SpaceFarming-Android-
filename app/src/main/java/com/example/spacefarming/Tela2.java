@@ -15,7 +15,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.spacefarming.entidades.Botijao;
 import com.example.spacefarming.frag.CadastroBotijao;
+import com.example.spacefarming.frag.CadastroUsuario;
+import com.example.spacefarming.frag.Historico;
 import com.example.spacefarming.frag.InfoBotijao;
+import com.example.spacefarming.frag.ListBotijao;
 import com.google.android.material.navigation.NavigationView;
 
 public class Tela2 extends AppCompatActivity {
@@ -29,8 +32,6 @@ public class Tela2 extends AppCompatActivity {
         myToolbar = findViewById(R.id.my_toolbar2);
         setSupportActionBar(myToolbar);
         setNavigationDrawer();
-
-       
         Intent it = getIntent();
         if (it.getIntExtra("frag", 0) == 1) {
 
@@ -44,7 +45,18 @@ public class Tela2 extends AppCompatActivity {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.add(R.id.main_frame2, new CadastroBotijao());
             ft.addToBackStack(null);
-
+            ft.commit();
+        }else if (it.getIntExtra("frag", 0) == 3) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.add(R.id.main_frame2, new CadastroUsuario());
+            ft.addToBackStack(null);
+            ft.commit();
+        }else if(it.getIntExtra("frag", 0) == 4){
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            Historico historico = new Historico();
+            historico.setIdBotijao(null);
+            ft.replace(R.id.main_frame2, historico);
+            ft.addToBackStack(null);
             ft.commit();
         }
 
@@ -73,7 +85,22 @@ public class Tela2 extends AppCompatActivity {
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
+                int itemId = menuItem.getItemId();
+                if(itemId==R.id.hist){
 
+                    Historico historico = new Historico();
+                    historico.setIdBotijao(null);
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.main_frame2, historico);
+                    ft.commit();
+                }else if(itemId==R.id.botijoes){
+                    Intent it = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(it);
+                }else if(itemId==R.id.exit){
+                    finish();
+
+                }
+                dLayout.closeDrawers();
                 return false;
             }
         });

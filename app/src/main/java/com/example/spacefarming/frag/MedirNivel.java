@@ -42,7 +42,7 @@ public class MedirNivel extends Fragment {
         View v = inflater.inflate(R.layout.frag_medir_nivel, container, false);
         tiNomeResponsavel = v.findViewById(R.id.tiNomeResponsavel);
         tiTelefoneResponsavel = v.findViewById(R.id.tiTelefoneResponsavel);
-        tiEmailResponsavel = v.findViewById(R.id.tiEmailResponsavel);
+        tiEmailResponsavel = v.findViewById(R.id.tiSenha);
         tiNivel = v.findViewById(R.id.tiNivel);
         tiData = v.findViewById(R.id.tiData);
         btConfirmar = v.findViewById(R.id.btConfirmar);

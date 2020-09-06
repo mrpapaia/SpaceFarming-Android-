@@ -23,7 +23,6 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
 
     private  DrawerLayout dLayout;
-    private ViewPager viewPager;
     private Toolbar myToolbar;
 
 
@@ -64,13 +63,25 @@ public class MainActivity extends AppCompatActivity {
 
     private  void setNavigationDrawer() {
         dLayout = findViewById(R.id.drawer_layout);
-
         NavigationView navView = findViewById(R.id.navigation);
         navView.setItemIconTintList(null);
         navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
+                int itemId = menuItem.getItemId();
+                if(itemId==R.id.hist){
+                    Intent it = new Intent(getApplicationContext(), Tela2.class);
+                    it.putExtra("frag",4);
+                    startActivity(it);
+                    dLayout.closeDrawers();
+                }else if(itemId==R.id.botijoes){
+                    FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+                    ft.replace(R.id.main_frame, new ListBotijao());
+                    ft.commit();
+                }else if(itemId==R.id.exit){
+                    finish();
 
+                }
                 return false;
             }
         });

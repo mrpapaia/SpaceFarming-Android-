@@ -18,6 +18,11 @@
         <item name="colorControlNormal">@color/textColor</item>
         <item name="android:textColor">@color/colorPrimaryDark</item>
     </style>
+    <style name="AppTheme.SplashScreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 

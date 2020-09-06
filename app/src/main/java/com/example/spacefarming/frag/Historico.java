@@ -19,7 +19,6 @@ public class Historico extends Fragment {
     private String idBotijao;
 
     public Historico() {
-        // Required empty public constructor
     }
 
 
