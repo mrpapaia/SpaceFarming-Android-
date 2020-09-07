@@ -5,7 +5,7 @@
     android:layout_width="155dp"
     android:layout_height="155dp"
     android:layout_marginTop="10dp"
-    android:layout_marginStart="30dp"
+    android:layout_marginStart="15dp"
     android:background="@color/background"
     tools:context=".adapter.ListBotijaoAdapter">
 

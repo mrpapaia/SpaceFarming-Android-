@@ -16,7 +16,7 @@ public class RetrofitCfg {
 
     public RetrofitCfg() {
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://spacefarming.mrpapaia.tech:8080/farm02/rest/")
+                .baseUrl("http://34.203.208.68:8080/farm02-0.0.1-SNAPSHOT/rest/")
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(JacksonConverterFactory.create())
                 .build();

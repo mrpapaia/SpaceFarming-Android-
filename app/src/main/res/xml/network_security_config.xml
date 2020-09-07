@@ -2,5 +2,6 @@
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">spacefarming.mrpapaia.tech</domain>
+        <domain includeSubdomains="true">34.203.208.68</domain>
     </domain-config>
 </network-security-config>
