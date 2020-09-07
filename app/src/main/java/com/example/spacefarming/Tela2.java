@@ -4,13 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.spacefarming.entidades.Botijao;
@@ -18,7 +15,6 @@ import com.example.spacefarming.frag.CadastroBotijao;
 import com.example.spacefarming.frag.CadastroUsuario;
 import com.example.spacefarming.frag.Historico;
 import com.example.spacefarming.frag.InfoBotijao;
-import com.example.spacefarming.frag.ListBotijao;
 import com.google.android.material.navigation.NavigationView;
 
 public class Tela2 extends AppCompatActivity {
@@ -97,6 +93,8 @@ public class Tela2 extends AppCompatActivity {
                     Intent it = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(it);
                 }else if(itemId==R.id.exit){
+                    AccessActivity accessActivity = new AccessActivity();
+                    accessActivity.exit();
                     finish();
 
                 }

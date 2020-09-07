@@ -139,7 +139,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/btLogin"
+            android:id="@+id/btCadastrar"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:background="@color/colorPrimary"

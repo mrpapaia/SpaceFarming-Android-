@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:8238434644:android:0b72cd2f1dff24c5bba0c1",
         "android_client_info": {
-          "package_name": "com.example.project_smart"
+          "package_name": "com.example.spacefarming"
         }
       },
       "oauth_client": [
@@ -37,9 +37,9 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:8238434644:android:fc1bdba5ff70ebc9bba0c1",
+        "mobilesdk_app_id": "1:8238434644:android:d4f1b3d278ee5d37bba0c1",
         "android_client_info": {
-          "package_name": "com.example.teste"
+          "package_name": "com.exemple.spacefarming"
         }
       },
       "oauth_client": [

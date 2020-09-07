@@ -1,12 +1,5 @@
 package com.example.spacefarming;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager.widget.ViewPager;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -15,8 +8,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.example.spacefarming.frag.ListBotijao;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.navigation.NavigationView;
 
 
@@ -78,7 +75,9 @@ public class MainActivity extends AppCompatActivity {
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.main_frame, new ListBotijao());
                     ft.commit();
-                }else if(itemId==R.id.exit){
+                }else if(itemId==R.id.exit) {
+                    AccessActivity accessActivity = new AccessActivity();
+                    accessActivity.exit();
                     finish();
 
                 }
