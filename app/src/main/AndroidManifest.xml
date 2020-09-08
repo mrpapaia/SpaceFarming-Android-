@@ -14,10 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".AccessActivity" />
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:parentActivityName=".AccessActivity" />
         <activity
             android:name=".Tela2"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".AccessActivity" />
         <activity
             android:name=".SplashScreen"
             android:theme="@style/AppTheme.SplashScreen">

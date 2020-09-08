@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.spacefarming.frag.ListBotijao;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -76,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
                     ft.replace(R.id.main_frame, new ListBotijao());
                     ft.commit();
                 }else if(itemId==R.id.exit) {
-                    AccessActivity accessActivity = new AccessActivity();
-                    accessActivity.exit();
                     finish();
+                    FirebaseAuth.getInstance().signOut();
+
 
                 }
                 return false;

@@ -16,6 +16,7 @@ import com.example.spacefarming.frag.CadastroUsuario;
 import com.example.spacefarming.frag.Historico;
 import com.example.spacefarming.frag.InfoBotijao;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Tela2 extends AppCompatActivity {
     private Toolbar myToolbar;
@@ -93,9 +94,8 @@ public class Tela2 extends AppCompatActivity {
                     Intent it = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(it);
                 }else if(itemId==R.id.exit){
-                    AccessActivity accessActivity = new AccessActivity();
-                    accessActivity.exit();
                     finish();
+                    FirebaseAuth.getInstance().signOut();
 
                 }
                 dLayout.closeDrawers();
