@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -47,8 +48,11 @@ public class CadastroBotijao extends Fragment {
         tiIdBotijao = v.findViewById(R.id.tiIdBotijao);
         tiCapacidade = v.findViewById(R.id.tiCapacidadeBotijao);
         spCanecas = v.findViewById(R.id.spCanecas);
+        spCanecas.setAdapter(new ArrayAdapter<String>(getContext(), R.layout.support_simple_spinner_dropdown_item, getResources().getStringArray(R.array.spiner)));
         spRacks = v.findViewById(R.id.spRacks);
+        spRacks.setAdapter(new ArrayAdapter<String>(getContext(), R.layout.support_simple_spinner_dropdown_item, getResources().getStringArray(R.array.spiner)));
         spPalhetas = v.findViewById(R.id.spPalhetas);
+        spPalhetas.setAdapter(new ArrayAdapter<String>(getContext(), R.layout.support_simple_spinner_dropdown_item, getResources().getStringArray(R.array.spiner)));
         cadastrar.setOnClickListener(cadastrar());
         cancelar.setOnClickListener(cancelar());
 

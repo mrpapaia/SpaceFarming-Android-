@@ -94,8 +94,10 @@ public class Tela2 extends AppCompatActivity {
                     Intent it = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(it);
                 }else if(itemId==R.id.exit){
-                    finish();
+                    MainActivity.aux = true;
                     FirebaseAuth.getInstance().signOut();
+                    shouldDisplayHomeUp();
+
 
                 }
                 dLayout.closeDrawers();
@@ -106,7 +108,7 @@ public class Tela2 extends AppCompatActivity {
 
 
     public void shouldDisplayHomeUp() {
-        System.out.println(getSupportFragmentManager().getBackStackEntryCount());
+
         if (getSupportFragmentManager().getBackStackEntryCount() >1) {
             getSupportFragmentManager().popBackStack();
 
