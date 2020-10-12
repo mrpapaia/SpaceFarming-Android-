@@ -109,13 +109,18 @@ public class Tela2 extends AppCompatActivity {
 
     public void shouldDisplayHomeUp() {
 
-        if (getSupportFragmentManager().getBackStackEntryCount() >1) {
+        if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
             getSupportFragmentManager().popBackStack();
 
         } else {
             finish();
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        shouldDisplayHomeUp();//Seu códshouldDisplayHomeUp()igo aqui dentro
     }
 
     @Override

@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                     ft.replace(R.id.main_frame, new ListBotijao());
                     ft.commit();
-                }else if(itemId==R.id.exit) {
+                } else if (itemId == R.id.exit) {
                     finish();
                     FirebaseAuth.getInstance().signOut();
 
@@ -97,9 +97,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void cadastrarBotijao(View v){
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
+
+    public void cadastrarBotijao(View v) {
         Intent it = new Intent(getApplicationContext(), Tela2.class);
-        it.putExtra("frag",2);
+        it.putExtra("frag", 2);
         startActivity(it);
     }
 }
