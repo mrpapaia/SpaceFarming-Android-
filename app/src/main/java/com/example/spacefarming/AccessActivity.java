@@ -19,7 +19,7 @@ public class AccessActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_access);
-        System.out.println("MEUCU");
+
         if (checklogin() == null) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.framceAccess, new Login());
@@ -34,5 +34,8 @@ public class AccessActivity extends AppCompatActivity {
         return FirebaseAuth.getInstance().getCurrentUser();
     }
 
-
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+    }
 }
